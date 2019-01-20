@@ -31,6 +31,6 @@ public class SampleDataProvider {
 
 
         users = new ArrayList<>();
-        users.add(new User("BobALob", "password", "bob@gmail.com"));
+        users.add(new User("bob", "password", "bob@gmail.com"));
     }
 }
