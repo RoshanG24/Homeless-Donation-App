@@ -66,6 +66,8 @@ captures/
 
 .idea/caches
 
+.idea/misc.xml
+
 .idea/modules.xml
 
 # Keystore files
