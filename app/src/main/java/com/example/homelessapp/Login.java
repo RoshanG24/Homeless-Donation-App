@@ -42,10 +42,16 @@ public class Login extends AppCompatActivity {
 
                 for (int i = 0; i < users.size(); i++) {
                     User user = users.get(i);
+                    try {
+                        Thread.sleep(200);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                     if (username.equals(user.getUserName()) && password.equals(user.getPassword())) {
                         intent = new Intent(Login.this, Dashboard.class);
                         intent.putExtra("username", username);
                         Login.this.startActivity(intent);
+                        progressBar.setVisibility(View.INVISIBLE);
                         break;
                     } else {
                         AlertDialog.Builder builder = new AlertDialog.Builder(Login.this);
