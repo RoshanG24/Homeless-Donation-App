@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:background="@drawable/bg"
+    android:background="@drawable/bg"
     tools:context=".HomelessProfile">
 
     <View
@@ -65,41 +65,22 @@
     <TextView
         android:id="@+id/about_content"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginStart="12dp"
         android:layout_marginLeft="12dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="12dp"
         android:layout_marginRight="12dp"
-        android:layout_marginBottom="109dp"
+        android:layout_marginBottom="8dp"
         android:gravity="center"
+        android:scrollbars="vertical"
         android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintBottom_toTopOf="@+id/life_goals"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/about"
         app:layout_constraintVertical_bias="0.53" />
-
-    <TextView
-        android:id="@+id/life_goals_content"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginRight="12dp"
-        android:gravity="center"
-        android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/view"
-        app:layout_constraintVertical_bias="0.775" />
 
     <TextView
         android:id="@+id/life_goals"
@@ -120,5 +101,25 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/view"
         app:layout_constraintVertical_bias="0.865" />
+
+    <TextView
+        android:id="@+id/life_goals_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:gravity="center"
+        android:scrollbars="vertical"
+        android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/life_goals"
+        app:layout_constraintVertical_bias="0.775" />
 
 </android.support.constraint.ConstraintLayout>

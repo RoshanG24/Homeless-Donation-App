@@ -18,15 +18,15 @@ public class SampleDataProvider {
         pots.add("Clothing");
 
         homelessPeople = new ArrayList<>();
-        homelessPeople.add(new HomelessPerson( 1234,"Frank",  "Samwise", 23, "Hello, I am homeless and need your help please pllease", "Reading, Uk", "1234.jpeg", pots));
-        homelessPeople.add(new HomelessPerson(4321,"Beth",  "Smith", 40, "I am temporarily homeless please", "London, UK",  "4321.jpeg", pots));
+        homelessPeople.add(new HomelessPerson( 1234,"Frank",  "Samwise", 23, "Hello, I am homeless and need your help please pllease ello, I am homeless and need your help plea ello, I am homeless and need your help plea ello, I am homeless and need your help plea ello, I am homeless and need your help plea ello, I am homeless and need your help plea ello, I am homeless and need your help pleaello, I am homeless and need your help plea  ello, I am homeless and need your help plea ello, I am homeless and need your help pleaello, I am homeless and need your help plea", "Fly a kite" , "Reading, Uk", "1234.jpeg", pots));
+        homelessPeople.add(new HomelessPerson(4321,"Beth",  "Smith", 40, "I am temporarily homeless please", "Get a job","London, UK",  "4321.jpeg", pots));
 
         donations = new ArrayList<>();
-        donations.add(new Donation(10, "Love you", "BobALob", "1234", "Food"));
-        donations.add(new Donation(20, "Love you", "BobALob", "1234", "Rent"));
-        donations.add(new Donation(50, "Love you", "BobALob", "1234", "Food"));
-        donations.add(new Donation(350, "Love you", "BobALob", "1234", "Rent"));
-        donations.add(new Donation(700, "Love you", "BobALob", "1234", "Clothes"));
+        donations.add(new Donation(10, "Love you", "bob", "1234", "Food"));
+        donations.add(new Donation(20, "Love you", "bob", "1234", "Rent"));
+        donations.add(new Donation(50, "Love you", "bob", "1234", "Food"));
+        donations.add(new Donation(350, "Love you", "bob", "1234", "Rent"));
+        donations.add(new Donation(700, "Love you", "bob", "1234", "Clothes"));
 
 
 

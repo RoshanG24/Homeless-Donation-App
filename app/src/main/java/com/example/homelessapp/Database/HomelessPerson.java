@@ -9,19 +9,29 @@ public class HomelessPerson {
     private String lastName;
     private int age;
     private String biography;
+    private String lifeGoals;
     private String location;
     private String picture;
     private ArrayList<String> pots;
 
-    public HomelessPerson(int id, String firstName, String lastName, int age, String biography, String location, String picture, ArrayList<String> pots) {
+    public HomelessPerson(int id, String firstName, String lastName, int age, String biography, String lifeGoals ,String location, String picture, ArrayList<String> pots) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
         this.biography = biography;
+        this.lifeGoals = lifeGoals;
         this.location = location;
         this.picture = picture;
         this.pots = pots;
+    }
+
+    public String getLifeGoals() {
+        return lifeGoals;
+    }
+
+    public void setLifeGoals(String lifeGoals) {
+        this.lifeGoals = lifeGoals;
     }
 
     public int getId() {
