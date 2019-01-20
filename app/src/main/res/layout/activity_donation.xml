@@ -5,6 +5,51 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg"
-    tools:context=".Donation">
+    tools:context=".DonationActivity">
+
+    <EditText
+        android:id="@+id/donationAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "5"
+        android:ems="10"
+        android:inputType="number"
+        tools:layout_editor_absoluteX="99dp"
+        tools:layout_editor_absoluteY="202dp" />
+
+    <TextView
+        android:id="@+id/donateeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="176dp"
+        tools:layout_editor_absoluteY="49dp" />
+
+    <TextView
+        android:id="@+id/potName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="176dp"
+        tools:layout_editor_absoluteY="119dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Donate"
+        android:onClick="donate"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="502dp" />
+
+    <EditText
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Leave a message here..."
+        tools:layout_editor_absoluteX="99dp"
+        tools:layout_editor_absoluteY="295dp" />
 
 </android.support.constraint.ConstraintLayout>

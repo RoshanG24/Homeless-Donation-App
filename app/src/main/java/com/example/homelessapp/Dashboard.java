@@ -1,5 +1,6 @@
 package com.example.homelessapp;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -12,6 +13,7 @@ import java.util.List;
 import lecho.lib.hellocharts.model.PieChartData;
 import lecho.lib.hellocharts.model.SliceValue;
 import lecho.lib.hellocharts.view.PieChartView;
+import android.widget.TextView;
 
 public class Dashboard extends AppCompatActivity {
 
@@ -22,31 +24,34 @@ public class Dashboard extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
 
+        Intent intent = getIntent();
+
+        String user = intent.getStringExtra("username");
+        TextView username = findViewById(R.id.textView);
+
+        username.setText(user);
         pieChartView = findViewById(R.id.chart);
 
         addData(pieChartView);
-
-
-
 
     }
 
     public void addData(PieChartView pcv) {
 
         ArrayList amounts = getAmounts();
-        List pieData = new ArrayList<>();
+        List<SliceValue> pieData = new ArrayList<SliceValue>();
         Float a = (float) amounts.get(0);
         Float b = (float) amounts.get(1);
         Float c = (float) amounts.get(2);
 
-
-        pieData.add(new SliceValue(a, Color.parseColor("#E0E0E0")).setLabel("Food: " + a));
-        pieData.add(new SliceValue(b, Color.parseColor("#E0E0E0")).setLabel("Rent: " + b));
-        pieData.add(new SliceValue(c, Color.parseColor("#E0E0E0")).setLabel("Clothes: " + c));
+        pieData.add(new SliceValue(a, Color.parseColor("#FFA500")).setLabel("Food: " + a));
+        pieData.add(new SliceValue(b, Color.parseColor("#FFE303")).setLabel("Rent: " + b));
+        pieData.add(new SliceValue(c, Color.parseColor("#FFFF7E")).setLabel("Clothes: " + c));
 
         PieChartData pieChartData = new PieChartData(pieData);
-        pieChartData.setHasLabels(true).setValueLabelTextSize(14);
+        pieChartData.setHasLabels(true).setValueLabelTextSize(20);
         pcv.setPieChartData(pieChartData);
+
     }
 
     public ArrayList getAmounts() {
@@ -76,7 +81,6 @@ public class Dashboard extends AppCompatActivity {
 
         return amounts;
     }
-
 
 }
 

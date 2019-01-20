@@ -7,7 +7,7 @@ public class Donation {
     private String homie;
     private String pot;
 
-    public Donation(int amount, String message, String user, String homie, String pot)
+    public Donation(float amount, String message, String user, String homie, String pot)
     {
         this.amount = amount;
         this.message = message;

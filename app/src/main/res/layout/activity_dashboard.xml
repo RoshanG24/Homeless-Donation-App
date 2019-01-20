@@ -12,21 +12,20 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="15dp"
-        tools:layout_editor_absoluteX="49dp"
+        tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="0dp" />
 
-    <!--<TextView-->
-        <!--android:id="@+id/textView"-->
-        <!--android:layout_width="271dp"-->
-        <!--android:layout_height="61dp"-->
-        <!--android:layout_marginStart="68dp"-->
-        <!--android:layout_marginLeft="68dp"-->
-        <!--android:layout_marginTop="24dp"-->
-        <!--android:text="Donation Totals"-->
-        <!--android:textAppearance="@style/TextAppearance.AppCompat.Subhead"-->
-        <!--android:textColorLink="@color/colorPrimary"-->
-        <!--android:textSize="36sp"-->
-        <!--app:layout_constraintStart_toStartOf="parent"-->
-        <!--app:layout_constraintTop_toTopOf="parent" />-->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="271dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginLeft="68dp"
+        android:layout_marginTop="24dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        android:textColorLink="@color/colorPrimary"
+        android:textSize="36sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
