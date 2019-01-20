@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:background="@drawable/bg"
+    android:background="@drawable/bg"
     tools:context=".DonationPots">
 
     <ImageView
@@ -56,7 +56,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/rentButton"
         android:layout_width="99dp"
         android:layout_height="40dp"
         android:layout_marginTop="40dp"
@@ -66,10 +66,10 @@
         android:text="ADD"
         android:textColor="@color/visablue"
         app:layout_constraintEnd_toEndOf="@+id/imageView5"
-        app:layout_constraintTop_toBottomOf="@+id/button4" />
+        app:layout_constraintTop_toBottomOf="@+id/foodButton" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/clothingButton"
         android:layout_width="99dp"
         android:layout_height="40dp"
         android:layout_marginTop="40dp"
@@ -81,10 +81,10 @@
         android:textColor="@color/visablue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/imageView4"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        app:layout_constraintTop_toBottomOf="@+id/rentButton" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/foodButton"
         android:layout_width="99dp"
         android:layout_height="39dp"
         android:layout_marginTop="300dp"
@@ -142,7 +142,7 @@
         android:text="Food"
         android:textColor="@color/visablue"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button4" />
+        app:layout_constraintEnd_toStartOf="@+id/foodButton" />
 
     <TextView
         android:id="@+id/textView8"
@@ -151,9 +151,9 @@
         android:layout_marginTop="52dp"
         android:layout_marginEnd="124dp"
         android:layout_marginRight="124dp"
-        android:text="House"
+        android:text="Rent"
         android:textColor="@color/visablue"
-        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintEnd_toStartOf="@+id/rentButton"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <TextView
@@ -165,7 +165,7 @@
         android:layout_marginRight="124dp"
         android:text="Chlothing"
         android:textColor="@color/visablue"
-        app:layout_constraintEnd_toStartOf="@+id/button5"
+        app:layout_constraintEnd_toStartOf="@+id/clothingButton"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
 </android.support.constraint.ConstraintLayout>
