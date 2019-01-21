@@ -17,7 +17,7 @@
         tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".Dashboard"/>
         <activity android:name=".PastScans" />
-        <activity android:name=".Donation" />
+        <activity android:name=".DonationActivity" />
         <activity android:name=".DonationPots" />
         <activity android:name=".HomelessProfile" />
         <activity android:name=".Login" />
