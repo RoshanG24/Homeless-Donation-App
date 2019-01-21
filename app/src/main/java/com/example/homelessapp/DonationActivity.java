@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.homelessapp.Database.HomelessPerson;
 import com.example.homelessapp.Database.SampleDataProvider;
@@ -66,6 +67,10 @@ public class DonationActivity extends AppCompatActivity {
         Intent intent = new Intent(DonationActivity.this, Dashboard.class);
         intent.putExtra("username", username);
 
+        Toast.makeText(getApplicationContext(), "Donation made!", Toast.LENGTH_LONG).show();
+
         DonationActivity.this.startActivity(intent);
+
+
     }
 }
