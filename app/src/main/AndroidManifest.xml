@@ -13,9 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".Dashboard" />
+        <activity android:name=".Dashboard"> </activity>
         <activity android:name=".PastScans" />
-        <activity android:name=".DonationActivity" />
+        <activity android:name=".DonationActivity"> </activity>
         <activity android:name=".DonationPots" />
         <activity android:name=".HomelessProfile">
         <intent-filter>

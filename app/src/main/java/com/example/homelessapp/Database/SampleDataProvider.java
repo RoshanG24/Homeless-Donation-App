@@ -18,11 +18,9 @@ public class SampleDataProvider {
         pots.add("Clothing");
 
         homelessPeople = new ArrayList<>();
-//        homelessPeople.add(new HomelessPerson( 1234,"Frank",  "Samwise", 23, "Hello, I am homeless and need your help please pllease ello, I am homeless and need your help plea ello, I am homeless and need your help plea ello, I am homeless and need your help plea ello, I am homeless and need your help plea ello, I am homeless and need your help plea ello, I am homeless and need your help pleaello, I am homeless and need your help plea  ello, I am homeless and need your help plea ello, I am homeless and need your help pleaello, I am homeless and need your help plea", "Fly a kite" , "Reading, Uk", "1234.jpeg", pots));
-//        homelessPeople.add(new HomelessPerson(4321,"Beth",  "Smith", 40, "I am temporarily homeless please", "Get a job","London, UK",  "4321.jpeg", pots));
 
-        homelessPeople.add(new HomelessPerson( 1234,"Frank",  "Samwise", 23, "Hello, I am homeless and need your help please pllease ello, I am homeless and need your help plea ello, I am homeless and need your help plea ello, I am homeless and need your help plea ello, I am homeless and need your help plea ello, I am homeless and need your help plea ello, I am homeless and need your help pleaello, I am homeless and need your help plea  ello, I am homeless and need your help plea ello, I am homeless and need your help pleaello, I am homeless and need your help plea", "Fly a kite" , "Reading, Uk", "p1234", pots));
-        homelessPeople.add(new HomelessPerson(4321,"Beth",  "Smith", 40, "I am temporarily homeless please", "Get a job","London, UK",  "p4321", pots));
+        homelessPeople.add(new HomelessPerson( 1234,"Frank",  "Samwise", 23, "I'm an ex music student who lost my job because of health issues, I'm living between shelters and using food banks. I'm aiming to save up for a new guitar so I can busk to start earning some money for myself.", "To be a professional musician" , "Reading, UK", "p1234", pots));
+        homelessPeople.add(new HomelessPerson(4321,"Beth",  "Smith", 40, "I am temporarily homeless after losing my job. Looking for any work opportunities and opportunities to better myself.", "Own a business","London, UK",  "p4321", pots));
 
         donations = new ArrayList<>();
         donations.add(new Donation(10, "Love you", "bob", "1234", "Food"));
