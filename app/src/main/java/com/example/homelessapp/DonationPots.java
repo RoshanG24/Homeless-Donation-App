@@ -28,6 +28,7 @@ public class DonationPots extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(DonationPots.this, DonationActivity.class);
+                intent.putExtra("USERNAME", userName);
                 intent.putExtra("pot", "Food");
                 intent.putExtra("homie", id);
                 startActivity(intent);
@@ -41,6 +42,7 @@ public class DonationPots extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(DonationPots.this, DonationActivity.class);
+                intent.putExtra("USERNAME", userName);
                 intent.putExtra("pot", "Rent");
                 intent.putExtra("homie", id);
                 startActivity(intent);

@@ -39,7 +39,7 @@ public class DonationActivity extends AppCompatActivity {
         }
 
         TextView homie = findViewById(R.id.donateeName);
-        String fullName = homelessPerson.getFirstName() + homelessPerson.getLastName();
+        String fullName = homelessPerson.getFirstName() + " " + homelessPerson.getLastName();
         homie.setText(fullName);
 
         TextView potName = findViewById(R.id.potName);

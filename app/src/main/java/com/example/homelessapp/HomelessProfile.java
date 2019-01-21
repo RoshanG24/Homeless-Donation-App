@@ -67,7 +67,7 @@ public class HomelessProfile extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(HomelessProfile.this, DonationPots.class);
-                intent.putExtra("USERNAME", userName);
+                intent.putExtra("USERNAME", "bob");  //todo fix this
                 intent.putExtra("HOMELESS-ID", idToSend);
                 startActivity(intent);
             }
