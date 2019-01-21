@@ -29,7 +29,7 @@ public class SampleDataProvider {
         donations.add(new Donation(20, "Love you", "bob", "1234", "Rent"));
         donations.add(new Donation(250, "Love you", "bob", "1234", "Food"));
         donations.add(new Donation(350, "Love you", "bob", "1234", "Rent"));
-        donations.add(new Donation(700, "Love you", "bob", "1234", "Clothes"));
+        donations.add(new Donation(700, "Love you", "bob", "1234", "Clothing"));
 
         users = new ArrayList<>();
         users.add(new User("bob", "password", "bob@gmail.com"));
