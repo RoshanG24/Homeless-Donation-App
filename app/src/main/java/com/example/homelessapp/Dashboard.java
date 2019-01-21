@@ -60,7 +60,7 @@ public class Dashboard extends AppCompatActivity {
 
         pieData.add(new SliceValue(a, Color.parseColor("#FFA500")).setLabel("Food: " + a));
         pieData.add(new SliceValue(b, Color.parseColor("#FFE303")).setLabel("Rent: " + b));
-        pieData.add(new SliceValue(c, Color.parseColor("#FFFF7E")).setLabel("Clothes: " + c));
+        pieData.add(new SliceValue(c, Color.parseColor("#FFFF7E")).setLabel("Clothing: " + c));
 
         PieChartData pieChartData = new PieChartData(pieData);
         pieChartData.setHasLabels(true).setValueLabelTextSize(20);
@@ -78,7 +78,7 @@ public class Dashboard extends AppCompatActivity {
                 food += donation.getAmount();
             }
 
-            if (donation.getPot() == "Clothes" ) {
+            if (donation.getPot() == "Clothing" ) {
                 clothes += donation.getAmount();
             }
 
