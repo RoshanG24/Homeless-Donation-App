@@ -8,17 +8,19 @@ import android.widget.Button;
 
 public class DonationPots extends AppCompatActivity {
 
+    private String userName;
+    private int id;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_donation_pots);
 
         Intent intent = getIntent();
-        int id = intent.getIntExtra("HOMELESS-ID", -1);
+        userName = intent.getStringExtra("USERNAME");
+        id = intent.getIntExtra("HOMELESS-ID", -1);
         if(id == -1){
             id = 4321; //todo fix this please
         }
-        final int idToSend = id;
         Button foodButton = findViewById(R.id.foodButton);
 
 
@@ -27,7 +29,7 @@ public class DonationPots extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(DonationPots.this, DonationActivity.class);
                 intent.putExtra("pot", "Food");
-                intent.putExtra("homie", idToSend);
+                intent.putExtra("homie", id);
                 startActivity(intent);
             }
         });
@@ -40,7 +42,7 @@ public class DonationPots extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(DonationPots.this, DonationActivity.class);
                 intent.putExtra("pot", "Rent");
-                intent.putExtra("homie", idToSend);
+                intent.putExtra("homie", id);
                 startActivity(intent);
             }
         });
@@ -51,8 +53,9 @@ public class DonationPots extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(DonationPots.this, DonationActivity.class);
+                intent.putExtra("USERNAME", userName);
                 intent.putExtra("pot", "Clothing");
-                intent.putExtra("homie", idToSend);
+                intent.putExtra("homie", id);
                 startActivity(intent);
             }
         });
