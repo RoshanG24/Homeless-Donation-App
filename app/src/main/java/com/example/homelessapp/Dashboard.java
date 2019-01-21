@@ -44,6 +44,20 @@ public class Dashboard extends AppCompatActivity {
         Float b = (float) amounts.get(1);
         Float c = (float) amounts.get(2);
 
+        TextView food_amount = findViewById(R.id.food_amount);
+        TextView rent_amount = findViewById(R.id.rent_amount);
+        TextView clothing_amount = findViewById(R.id.clothing_amount);
+        TextView total_amount = findViewById(R.id.total_spend);
+
+        Float total = a + b + c;
+
+        food_amount.setText("£" + a);
+        rent_amount.setText("£" + b);
+        clothing_amount.setText("£" + c);
+        total_amount.setText("£" + total);
+
+
+
         pieData.add(new SliceValue(a, Color.parseColor("#FFA500")).setLabel("Food: " + a));
         pieData.add(new SliceValue(b, Color.parseColor("#FFE303")).setLabel("Rent: " + b));
         pieData.add(new SliceValue(c, Color.parseColor("#FFFF7E")).setLabel("Clothes: " + c));
