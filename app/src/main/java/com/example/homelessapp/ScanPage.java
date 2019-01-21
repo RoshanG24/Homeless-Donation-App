@@ -39,7 +39,7 @@ public class ScanPage extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_scan_page2);
         context = this;
 
         tvNFCContent = (TextView) findViewById(R.id.nfc_contents);
