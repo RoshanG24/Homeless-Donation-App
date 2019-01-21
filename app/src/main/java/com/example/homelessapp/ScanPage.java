@@ -35,7 +35,6 @@ public class ScanPage extends Activity {
 
     TextView tvNFCContent;
     TextView message;
-    Button btnWrite;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -44,29 +43,6 @@ public class ScanPage extends Activity {
         context = this;
 
         tvNFCContent = (TextView) findViewById(R.id.nfc_contents);
-        message = (TextView) findViewById(R.id.edit_message);
-        btnWrite = (Button) findViewById(R.id.button);
-
-        btnWrite.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v) {
-                try {
-                    if(myTag ==null) {
-                        Toast.makeText(context, ERROR_DETECTED, Toast.LENGTH_LONG).show();
-                    } else {
-                        write(message.getText().toString(), myTag);
-                        Toast.makeText(context, WRITE_SUCCESS, Toast.LENGTH_LONG ).show();
-                    }
-                } catch (IOException e) {
-                    Toast.makeText(context, WRITE_ERROR, Toast.LENGTH_LONG ).show();
-                    e.printStackTrace();
-                } catch (FormatException e) {
-                    Toast.makeText(context, WRITE_ERROR, Toast.LENGTH_LONG ).show();
-                    e.printStackTrace();
-                }
-            }
-        });
 
         nfcAdapter = NfcAdapter.getDefaultAdapter(this);
         if (nfcAdapter == null) {
@@ -126,7 +102,7 @@ public class ScanPage extends Activity {
     /******************************************************************************
      **********************************Write to NFC Tag****************************
      ******************************************************************************/
-    private void write(String text, Tag tag) throws IOException, FormatException {
+    /*private void write(String text, Tag tag) throws IOException, FormatException {
         NdefRecord[] records = { createRecord(text) };
         NdefMessage message = new NdefMessage(records);
         // Get an instance of Ndef for the tag.
@@ -157,7 +133,7 @@ public class ScanPage extends Activity {
 
         return recordNFC;
     }
-
+*/
 
 
     @Override
