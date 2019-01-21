@@ -23,20 +23,22 @@
         android:id="@+id/imageView4"
         android:layout_width="match_parent"
         android:layout_height="80dp"
+        android:layout_marginTop="652dp"
         android:scaleType="fitXY"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5"
-        app:srcCompat="@drawable/plus_copy" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/plus_copy"
+        tools:layout_editor_absoluteX="0dp" />
 
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="match_parent"
         android:layout_height="80dp"
+        android:layout_marginTop="572dp"
         android:scaleType="fitXY"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        app:srcCompat="@drawable/plus_copy"
-        tools:layout_editor_absoluteX="161dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/plus_copy" />
 
     <TextView
         android:id="@+id/textView"
@@ -136,36 +138,36 @@
         android:id="@+id/textView6"
         android:layout_width="87dp"
         android:layout_height="29dp"
-        android:layout_marginEnd="124dp"
-        android:layout_marginRight="124dp"
-        android:layout_marginBottom="185dp"
+        android:layout_marginTop="516dp"
+        android:layout_marginEnd="125dp"
+        android:layout_marginRight="125dp"
         android:text="Food"
         android:textColor="@color/visablue"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/foodButton" />
+        app:layout_constraintEnd_toStartOf="@+id/foodButton"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="87dp"
         android:layout_height="29dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="595dp"
         android:layout_marginEnd="124dp"
         android:layout_marginRight="124dp"
         android:text="Rent"
         android:textColor="@color/visablue"
         app:layout_constraintEnd_toStartOf="@+id/rentButton"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView9"
         android:layout_width="87dp"
         android:layout_height="29dp"
-        android:layout_marginTop="55dp"
+        android:layout_marginTop="680dp"
         android:layout_marginEnd="124dp"
         android:layout_marginRight="124dp"
         android:text="Chlothing"
         android:textColor="@color/visablue"
         app:layout_constraintEnd_toStartOf="@+id/clothingButton"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
