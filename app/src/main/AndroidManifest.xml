@@ -16,11 +16,7 @@
         <activity android:name=".Dashboard"> </activity>
         <activity android:name=".PastScans" />
         <activity android:name=".DonationActivity"> </activity>
-        <activity android:name=".DonationPots" ><intent-filter>
-        <action android:name="android.intent.action.MAIN" />
-
-        <category android:name="android.intent.category.LAUNCHER" />
-    </intent-filter>/</activity>
+        <activity android:name=".DonationPots" />
         <activity android:name=".HomelessProfile">
         <intent-filter>
             <action android:name="android.nfc.action.NDEF_DISCOVERED" />
