@@ -5,16 +5,21 @@ import android.app.PendingIntent;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.nfc.NdefMessage;
+import android.nfc.NdefRecord;
 import android.nfc.NfcAdapter;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Button;
 import android.nfc.Tag;
 import 	android.content.Context;
+import android.view.View;
+import java.io.IOException;
+import android.nfc.FormatException;
 import java.io.UnsupportedEncodingException;
-
+import	android.nfc.tech.Ndef;
 
 public class ScanPage extends Activity {
 
@@ -29,11 +34,12 @@ public class ScanPage extends Activity {
     Context context;
 
     TextView tvNFCContent;
+    TextView message;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_scan_page2);
+        setContentView(R.layout.activity_main);
         context = this;
 
         tvNFCContent = (TextView) findViewById(R.id.nfc_contents);
@@ -44,24 +50,20 @@ public class ScanPage extends Activity {
             Toast.makeText(this, "This device doesn't support NFC.", Toast.LENGTH_LONG).show();
             finish();
         }
-        String id =readFromIntent(getIntent());
+
+        readFromIntent(getIntent());
 
         pendingIntent = PendingIntent.getActivity(this, 0, new Intent(this, getClass()).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP), 0);
         IntentFilter tagDetected = new IntentFilter(NfcAdapter.ACTION_TAG_DISCOVERED);
         tagDetected.addCategory(Intent.CATEGORY_DEFAULT);
         writeTagFilters = new IntentFilter[] { tagDetected };
-
-        Intent intent1 = new Intent(ScanPage.this, HomelessProfile.class);
-        int numID = Integer.valueOf(id);
-        intent1.putExtra("HOMELESS-ID", numID);
-        startActivity(intent1);
     }
 
 
     /******************************************************************************
      **********************************Read From NFC Tag***************************
      ******************************************************************************/
-    private String readFromIntent(Intent intent) {
+    private void readFromIntent(Intent intent) {
         String action = intent.getAction();
         if (NfcAdapter.ACTION_TAG_DISCOVERED.equals(action)
                 || NfcAdapter.ACTION_TECH_DISCOVERED.equals(action)
@@ -74,12 +76,11 @@ public class ScanPage extends Activity {
                     msgs[i] = (NdefMessage) rawMsgs[i];
                 }
             }
-            return buildTagViews(msgs);
+            buildTagViews(msgs);
         }
-        return "";
     }
-    private String buildTagViews(NdefMessage[] msgs) {
-        if (msgs == null || msgs.length == 0) return "";
+    private void buildTagViews(NdefMessage[] msgs) {
+        if (msgs == null || msgs.length == 0) return;
 
         String text = "";
 //        String tagId = new String(msgs[0].getRecords()[0].getType());
@@ -94,8 +95,8 @@ public class ScanPage extends Activity {
         } catch (UnsupportedEncodingException e) {
             Log.e("UnsupportedEncoding", e.toString());
         }
-        return text;
-        //tvNFCContent.setText("NFC Content: " + text);
+
+        tvNFCContent.setText("NFC Content: " + text);
     }
 
 
@@ -139,15 +140,10 @@ public class ScanPage extends Activity {
     @Override
     protected void onNewIntent(Intent intent) {
         setIntent(intent);
-        String id = readFromIntent(intent);
+        readFromIntent(intent);
         if(NfcAdapter.ACTION_TAG_DISCOVERED.equals(intent.getAction())){
             myTag = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG);
         }
-
-        /*Intent intent1 = new Intent(ScanPage.this, HomelessProfile.class);
-        int numID = Integer.valueOf(id);
-        intent1.putExtra("HOMELESS-ID", numID);
-        startActivity(intent1);*/
     }
 
     @Override
