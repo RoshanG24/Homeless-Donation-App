@@ -22,7 +22,7 @@
         android:id="@+id/imageView4"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:layout_marginTop="747dp"
+        android:layout_marginTop="738dp"
         android:scaleType="fitXY"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/plus_copy"
