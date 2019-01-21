@@ -74,15 +74,15 @@ public class Dashboard extends AppCompatActivity {
         float clothes = 0;
 
         for(Donation donation : SampleDataProvider.donations) {
-            if (donation.getPot() == "Food" ) {
+            if (donation.getPot().equals("Food")) {
                 food += donation.getAmount();
             }
 
-            if (donation.getPot() == "Clothing" ) {
+            if (donation.getPot().equals("Clothing") ) {
                 clothes += donation.getAmount();
             }
 
-            if (donation.getPot() == "Rent" ) {
+            if (donation.getPot().equals("Rent")) {
                 rent += donation.getAmount();
             }
 
