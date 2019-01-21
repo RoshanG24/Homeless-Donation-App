@@ -23,11 +23,9 @@ public class SampleDataProvider {
         homelessPeople.add(new HomelessPerson(4321,"Beth",  "Smith", 40, "I am temporarily homeless after losing my job. Looking for any work opportunities and opportunities to better myself.", "Own a business","London, UK",  "p4321", pots));
 
         donations = new ArrayList<>();
-        donations.add(new Donation(10, "Love you", "bob", "1234", "Food"));
-        donations.add(new Donation(20, "Love you", "bob", "1234", "Rent"));
-        donations.add(new Donation(250, "Love you", "bob", "1234", "Food"));
-        donations.add(new Donation(350, "Love you", "bob", "1234", "Rent"));
-        donations.add(new Donation(700, "Love you", "bob", "1234", "Clothing"));
+        donations.add(new Donation(100, "Love you", "bob", "1234", "Food"));
+        donations.add(new Donation(100, "Love you", "bob", "1234", "Rent"));
+        donations.add(new Donation(100, "Love you", "bob", "1234", "Clothing"));
 
         users = new ArrayList<>();
         users.add(new User("bob", "password", "bob@gmail.com"));
