@@ -15,6 +15,7 @@ import com.example.homelessapp.Database.Donation;
 public class DonationActivity extends AppCompatActivity {
 
     private HomelessPerson homelessPerson;
+    private String username;
 //    final Intent intent;
 
     @Override
@@ -23,6 +24,7 @@ public class DonationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_donation);
 
         Intent intent = getIntent();
+        username = intent.getStringExtra("USERNAME");
         String pot = intent.getStringExtra("pot");
         int id = intent.getIntExtra("homie", -1);
         if(id == -1){
@@ -61,6 +63,7 @@ public class DonationActivity extends AppCompatActivity {
         SampleDataProvider.donations.add(new Donation(value, message.toString(), "bob", "1234", "Food"));
 
         Intent intent = new Intent(DonationActivity.this, Dashboard.class);
+        intent.putExtra("username", username);
 
         DonationActivity.this.startActivity(intent);
     }

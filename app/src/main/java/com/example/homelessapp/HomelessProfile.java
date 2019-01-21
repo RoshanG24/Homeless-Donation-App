@@ -17,6 +17,8 @@ import java.util.ArrayList;
 public class HomelessProfile extends AppCompatActivity {
 
     private HomelessPerson homelessPerson;
+    private int id;
+    private String userName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +26,7 @@ public class HomelessProfile extends AppCompatActivity {
         setContentView(R.layout.activity_homeless_profile);
 
         Intent intent = getIntent();
+        userName = intent.getStringExtra("USERNAME");
         int id = intent.getIntExtra("HOMELESS-ID", -1);
         if(id == -1){
             id = 4321; //todo fix this please
@@ -64,6 +67,7 @@ public class HomelessProfile extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(HomelessProfile.this, DonationPots.class);
+                intent.putExtra("USERNAME", userName);
                 intent.putExtra("HOMELESS-ID", idToSend);
                 startActivity(intent);
             }
