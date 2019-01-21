@@ -63,7 +63,7 @@ public class DonationActivity extends AppCompatActivity {
         SampleDataProvider.donations.add(new Donation(value, message.toString(), "bob", "1234", "Food"));
 
         Intent intent = new Intent(DonationActivity.this, Dashboard.class);
-        intent.putExtra("USERNAME", username);
+        intent.putExtra("username", username);
 
         DonationActivity.this.startActivity(intent);
     }

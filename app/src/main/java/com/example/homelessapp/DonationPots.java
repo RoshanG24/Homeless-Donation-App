@@ -49,7 +49,7 @@ public class DonationPots extends AppCompatActivity {
 
         Button clothingButton = findViewById(R.id.clothingButton);
 
-        rentButton.setOnClickListener(new View.OnClickListener() {
+        clothingButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(DonationPots.this, DonationActivity.class);
