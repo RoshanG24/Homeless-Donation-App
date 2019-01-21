@@ -61,7 +61,7 @@ public class DonationActivity extends AppCompatActivity {
 
         float value = Float.valueOf(amount.getText().toString());
 
-        SampleDataProvider.donations.add(new Donation(value, message.toString(), "bob", "1234", pot));
+        SampleDataProvider.donations.add(new Donation(value, "Hello", "bob", "1234", pot));
         System.out.println(getIntent().getStringExtra("pot"));
         Intent intent = new Intent(DonationActivity.this, Dashboard.class);
         intent.putExtra("username", username);
