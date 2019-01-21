@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">HomelessApp</string>
+    <string name="app_name">GiV</string>
 
     <string-array name="pots">
         <item>"Food"</item>
