@@ -16,6 +16,7 @@ public class DonationActivity extends AppCompatActivity {
 
     private HomelessPerson homelessPerson;
     private String username;
+    private String pot;
 //    final Intent intent;
 
     @Override
@@ -25,7 +26,7 @@ public class DonationActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         username = intent.getStringExtra("USERNAME");
-        String pot = intent.getStringExtra("pot");
+        pot = intent.getStringExtra("pot");
         int id = intent.getIntExtra("homie", -1);
         if(id == -1){
             id = 1234; //todo fix this please
@@ -60,8 +61,8 @@ public class DonationActivity extends AppCompatActivity {
 
         float value = Float.valueOf(amount.getText().toString());
 
-        SampleDataProvider.donations.add(new Donation(value, message.toString(), "bob", "1234", "Food"));
-
+        SampleDataProvider.donations.add(new Donation(value, message.toString(), "bob", "1234", pot));
+        System.out.println(getIntent().getStringExtra("pot"));
         Intent intent = new Intent(DonationActivity.this, Dashboard.class);
         intent.putExtra("username", username);
 
