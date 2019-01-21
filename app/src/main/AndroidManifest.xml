@@ -29,7 +29,6 @@
         <activity android:name=".Login" />
         <activity android:name=".AddCardDetails" />
         <activity android:name=".Registration" />
-        <activity android:name="ScanPage" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
