@@ -29,7 +29,7 @@ public class Dashboard extends AppCompatActivity {
         String user = intent.getStringExtra("username");
         TextView username = findViewById(R.id.textView);
 
-        username.setText(user);
+        username.setText("Hey, " + user);
         pieChartView = findViewById(R.id.chart);
 
         addData(pieChartView);
