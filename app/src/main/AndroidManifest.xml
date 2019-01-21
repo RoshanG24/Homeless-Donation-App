@@ -15,7 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".Dashboard"/>
+        <activity android:name=".Dashboard" />
         <activity android:name=".PastScans" />
         <activity android:name=".DonationActivity" />
         <activity android:name=".DonationPots" />
@@ -23,6 +23,13 @@
         <activity android:name=".Login" />
         <activity android:name=".AddCardDetails" />
         <activity android:name=".Registration" />
+        <activity android:name="ScanPage" >
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
